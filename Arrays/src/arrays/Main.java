@@ -14,9 +14,13 @@ public class Main {
 //        Ejercicio2 Ej2 = new Ejercicio2();
 //        Ej2.permutaciones(cadena1, cadena2);
         
-        String cadena = "Mr John Smith    ";
-        Ejercicio3 Ej3 = new Ejercicio3();
-        Ej3.cambiarEspacios(cadena);
+//        String cadena = "Mr John Smith    ";
+//        Ejercicio3 Ej3 = new Ejercicio3();
+//        Ej3.cambiarEspacios(cadena);
+
+        String cadena = "tact coa";
+        Ejercicio4 Ej4 = new Ejercicio4();
+        Ej4.permutacionPalindromo(cadena);
     }
     
 }
