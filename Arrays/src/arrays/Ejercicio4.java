@@ -2,6 +2,7 @@
 package arrays;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.Hashtable;
 
 public class Ejercicio4 {
@@ -15,39 +16,61 @@ public class Ejercicio4 {
                 letras.add(String.valueOf(letra));
             }
         }
-        verificarPalindromo(cadena, letras);
+        agruparLetras(cadena, letras);
     }
     
-    private void verificarPalindromo(String cadena,  ArrayList<String> letras){
+    private void agruparLetras(String cadena,  ArrayList<String> letras){
         if(letras.size()%2 == 0){
             System.out.println("par");
         }else{
-            System.out.println("impar");
-            int mitad = (letras.size()/2)+1;
+//            System.out.println("impar");
+//            int mitad = (letras.size()/2)+1;
             Hashtable listaLetras = new Hashtable();
             for (int i = 0; i < letras.size(); i++) {
-                int ascii = letras.get(i).charAt(i);
+                int ascii = letras.get(i).charAt(0);
                 
-                if(!listaLetras.containsKey(ascii)){
+                if(listaLetras.containsKey(ascii)){
+                    
                     ArrayList<String> caracteres = new ArrayList<String>();
                     caracteres = (ArrayList<String>) listaLetras.get(ascii);
-                    caracteres.add(letras.get(i));
+                    String caracter = letras.get(i);
+                    caracteres.add(caracter);
                     listaLetras.put(ascii, caracteres);
-                }else{
+                    
+                } else {
+                    
                     ArrayList<String> caracteres = new ArrayList<String>();
                     caracteres.add(letras.get(i));
-                    listaLetras.put(i, caracteres);
+                    listaLetras.put(ascii, caracteres);
                     
                 }
             }
+            int par = 0, impar = 0;
+            Enumeration e = listaLetras.keys();
+            int clave;
+            ArrayList<String> valor = new ArrayList<String>();
+            while( e.hasMoreElements() ) {
+                clave = (int) e.nextElement();
+                valor = (ArrayList<String>) listaLetras.get( clave );
+                if (valor.size() % 2 == 0) {
+                    par++;
+//                    System.out.println( "Clave : " + clave + " - Valor : " + valor + " - tipo : par");
+                } else {
+                    impar++;
+//                    System.out.println( "Clave : " + clave + " - Valor : " + valor + " - tipo : impar");
+                }
+            }
             
-//            for (int i = 0; i < 10; i++) {
-//                listaLetras.
-//            }
+            if (impar > 1){
+                System.out.println("No es compatible con convinaciones palindromas");
+            } else {
+                crearPalindromos(listaLetras, false);
+            }
+         
         }
     }
     
-    public void crearPalindromos(Hashtable listaLetras){
-        
+    public void crearPalindromos(Hashtable listaLetras, boolean par){
+       
     }
 }
