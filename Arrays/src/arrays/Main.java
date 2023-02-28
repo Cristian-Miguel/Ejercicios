@@ -1,6 +1,9 @@
 
 package arrays;
 
+import java.util.Hashtable;
+import java.util.Stack;
+
 public class Main {
     
     public static void main(String[] args) {
@@ -18,9 +21,11 @@ public class Main {
 //        Ejercicio3 Ej3 = new Ejercicio3();
 //        Ej3.cambiarEspacios(cadena);
 
-        String cadena = "tact coa";
-        Ejercicio4 Ej4 = new Ejercicio4();
-        Ej4.permutacionPalindromo(cadena);
+//        String cadena = "t act co a";
+//        Ejercicio4 Ej4 = new Ejercicio4();
+//        Ej4.permutacionPalindromo(cadena);
+//        String cadenaOriginal = "pale";
+//        String cadenaDiferente = "pal";
     }
     
 }
