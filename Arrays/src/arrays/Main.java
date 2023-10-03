@@ -26,6 +26,13 @@ public class Main {
 //        Ej4.permutacionPalindromo(cadena);
 //        String cadenaOriginal = "pale";
 //        String cadenaDiferente = "pal";
+
+        String original = "pale";
+        String modificada = "baler";
+        Ejercicio5 ejercicio5 = new Ejercicio5();
+        boolean valido = ejercicio5.checador(original, modificada);
+        System.out.println("original = " + original + " --- modificada = " + modificada);
+        System.out.println("fue modificado = "+valido);
     }
     
 }
