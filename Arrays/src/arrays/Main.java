@@ -27,12 +27,22 @@ public class Main {
 //        String cadenaOriginal = "pale";
 //        String cadenaDiferente = "pal";
 
-        String original = "pale";
-        String modificada = "baler";
-        Ejercicio5 ejercicio5 = new Ejercicio5();
-        boolean valido = ejercicio5.checador(original, modificada);
-        System.out.println("original = " + original + " --- modificada = " + modificada);
-        System.out.println("fue modificado = "+valido);
+//        String original = "pale";
+//        String modificada = "baler";
+//        Ejercicio5 ejercicio5 = new Ejercicio5();
+//        boolean valido = ejercicio5.checador(original, modificada);
+//        System.out.println("original = " + original + " --- modificada = " + modificada);
+//        System.out.println("fue modificado = "+valido);
+
+        String original = "aabcccccaaab";
+        Ejercicio6 ejercicio6 = new Ejercicio6();
+        String resultado = ejercicio6.verificarString(original);
+        if( resultado.equals(original) ){
+            System.out.println( "El resultado es mayor al orinal" );
+        } else {
+            System.out.println( "El resultado es menor y su cadena es: " + resultado );
+        }
+        
     }
     
 }
