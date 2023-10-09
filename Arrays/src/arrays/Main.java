@@ -34,15 +34,40 @@ public class Main {
 //        System.out.println("original = " + original + " --- modificada = " + modificada);
 //        System.out.println("fue modificado = "+valido);
 
-        String original = "aabcccccaaab";
-        Ejercicio6 ejercicio6 = new Ejercicio6();
-        String resultado = ejercicio6.verificarString(original);
-        if( resultado.equals(original) ){
-            System.out.println( "El resultado es mayor al orinal" );
-        } else {
-            System.out.println( "El resultado es menor y su cadena es: " + resultado );
-        }
+//        String original = "aabcccccaaab";
+//        Ejercicio6 ejercicio6 = new Ejercicio6();
+//        String resultado = ejercicio6.verificarString(original);
+//        if( resultado.equals(original) ){
+//            System.out.println( "El resultado es mayor al orinal" );
+//        } else {
+//            System.out.println( "El resultado es menor y su cadena es: " + resultado );
+//        }
+
+        Ejericio7();
+    }
+    
+    public static void Ejercicio6(){
         
+    }
+    
+    public static void Ejericio7(){
+        int matriz [] [] = {
+            {0,0,1,1,0,0},
+            {0,0,1,1,0,0},
+            {0,1,1,1,1,0},
+            {0,1,1,1,1,0},
+            {0,0,1,1,0,0},
+            {0,0,1,1,0,0},
+        };
+        
+        Ejercicio7 ejercicio7 = new Ejercicio7();
+        int resultado[][] = ejercicio7.manejarMatriz(matriz);
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(resultado[i][j]+" ");
+            }
+            System.out.println("");
+        }
     }
     
 }
